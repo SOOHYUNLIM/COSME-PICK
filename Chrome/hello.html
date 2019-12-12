@@ -1,0 +1,75 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        BODY {
+            width: 500px;
+            min-height: 300px;
+        }
+
+        .wantedPrice {
+            border: 0 none;
+            background: none;
+            color: black;
+            border-bottom: 1px solid black;
+            height: 29px;
+            line-height: 29px;
+            width: 40vw;
+            margin-bottom: 10px;
+        }
+
+        .button {
+            border: 0 none;
+            background: none;
+            color: black;
+            border: 2px solid black;
+            width: 40vw;
+            height: 20px;
+            display: inline-block;
+            box-sizing: border-box;
+            text-align: center;
+            padding: 0;
+        }
+
+        .content {
+            width: 45vw;
+            margin: 0.5em;
+            text-align: center;
+            display: none;
+        }
+        
+    </style>
+
+    <script src="jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.5.2/firebase.js"></script>
+    <script src="test.js"></script>
+</head>
+
+<body>
+<div>
+    <img src="COSMEPIC.png" style="width: 400px; height: auto; margin-top: 10px; margin-left: 50px">
+</div>
+
+<div class="waitPage" style="text-align: center; margin-top: 55px"><img src="wait.png" style="width: 80vw; height: auto"></div>
+
+<div class="content" style="float: left;">
+    <img id="productImg" src="" style="width: auto; height: 200px;">
+</div>
+
+<div class="content" style="float: right;">
+    <div style="height: 22vh; margin-top: 8vh"><h3 id="title">상품명</h3></div>
+<!--    input태그 null-->
+    <div><form><input class='wantedPrice' type='type' placeholder='원하는 가격을 입력해주세요' required>
+        <button class="button">입력</button></form></div>
+</div>
+
+</body>
+
+</html>

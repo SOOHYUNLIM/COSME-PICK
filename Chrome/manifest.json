@@ -1,0 +1,35 @@
+{
+    "name": "COSME-PICK",
+    "description" : "Wake me up when it came to the price I wanted",
+    "version": "1.0",
+    "manifest_version": 2,
+  "content_security_policy":"script-src 'self' https://www.gstatic.com/ https://*.firebaseio.com https://www.googleapis.com; object-src 'self'",
+"background": {
+       "page": "background.html",
+    "persistent": false
+  },
+  "permissions": [
+    "identity"
+  ],
+  "oauth2": {
+    "client_id": "172501072688-2puvm54f3a04ng417lkf9kg1m8qdfu34.apps.googleusercontent.com",
+    "scopes": [
+      "https://www.googleapis.com/auth/userinfo.email",
+      "https://www.googleapis.com/auth/userinfo.profile"
+    ]
+  },
+
+"browser_action": {
+      "default_icon": "icon.png",
+      "default_popup": "hello.html"
+    },
+    "content_scripts":[{
+	"js": ["jquery.min.js"],
+	"matches": ["<all_urls>"]
+    }],
+    "permissions": [
+        "activeTab", "<all_urls>", "tabs"
+    ]
+}
+
+
