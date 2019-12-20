@@ -7,7 +7,7 @@ import requests
 from bs4 import BeautifulSoup
 
 def lambda_handler(event, context):
-    conn = pymysql.connect(host='django.db.backends.mysql', user='bit04', passwd='1234', db='jarvis')
+    conn = pymysql.connect(host='', user='bit04', passwd='', db='jarvis')
     curs = conn.cusor()
     sql = 'select now()'
     curs.execute(sql)
